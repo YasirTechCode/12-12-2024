@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Feature Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .our-features {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .feature-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(25% - 20px); /* Adjusts to 4 cards per row on larger screens */
+            text-align: center;
+            max-width: calc(25% - 20px);
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 1024px) {
+            .feature-item {
+                flex: 1 1 calc(33.333% - 20px); /* 3 cards per row on medium screens */
+                max-width: calc(33.333% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .feature-item {
+                flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .feature-item {
+                flex: 1 1 100%; /* 1 card per row on very small screens */
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="our-features">
+        <div class="container">
+            <div class="feature-item">Easy Site Builder</div>
+            <div class="feature-item">Domain Registration</div>
+            <div class="feature-item">Reliable Hosting</div>
+            <div class="feature-item">24/7 Customer Support</div>
+            <div class="feature-item">One-Click Installs</div>
+            <div class="feature-item">Scalable Hosting Plans</div>
+        </div>
+    </section>
+</body>
+</html>
